@@ -1,0 +1,265 @@
+/* ------------------------MAIN CSS OPTIONS----------------- */
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(192, 192, 192);
+}
+
+.container {
+  min-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.head-title {
+  font-size: 34px;
+  margin-top: 50px;
+  align-items: center;
+  text-align: center;
+  font-weight: 900;
+}
+
+/* -------------------FIRST BUTTON------------------ */
+
+.first-container {
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+.first-button {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.first-button span {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 8px;
+  z-index: 1;
+}
+
+.first-button .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #4973ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.first-button .liquid::after,
+.first-button .liquid::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.first-button .liquid::before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+.first-button .liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+.first-button:hover .liquid {
+  top: -120px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+/* -------------------------SECOND BUTTON----------------- */
+
+.second-button {
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+.second-btn {
+  width: 200px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1.2px;
+  padding: 12px 32px;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.second-btn:focus {
+  outline: none;
+}
+.second-btn {
+  color: #4f5e7d;
+}
+.second-btn {
+  border: 1px solid #4f5e7d;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.second-btn {
+  transition-property: color;
+  transition-duration: 0.2s;
+}
+.second-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #4f5e7d;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+.second-btn:hover {
+  color: #fff;
+}
+.second-btn:hover:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+}
+
+/* ---------------------3 Button----------------- */
+.third-button {
+  margin-left: 50px;
+  position: relative;
+  width: 200px;
+  height: 50px;
+
+  margin-top: 6vh;
+  overflow: hidden;
+  border: 1px solid;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 8px;
+}
+.third-button .button-subm {
+  width: 101%;
+  height: 101%;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background: #d83f87;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+}
+.third-button .button-subm:hover {
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 0.7s steps(22) forwards;
+}
+
+.text {
+  position: absolute;
+  color: #000;
+  text-align: center;
+  width: 101%;
+
+  font-weight: 300;
+  position: absolute;
+  font-size: 22px;
+  margin-top: 11px;
+  overflow: hidden;
+  font-weight: bold;
+}
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+/* -------------------------4 Button------------------ */
